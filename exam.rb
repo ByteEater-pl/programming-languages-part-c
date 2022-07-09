@@ -43,4 +43,4 @@ Array.define_method(:inject) { |_| 0 }
 #Array.send(:define_method, :inject) { |_| 0 }
 s3 = a.sum
 s4 = b.sum
-p [s3, s4] # added by me for debugging
+p(s3, s4) # added by me for debugging
