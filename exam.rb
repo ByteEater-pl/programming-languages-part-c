@@ -47,3 +47,5 @@ Array.define_method(:inject) { |_| 0 }
 s3 = a.sum
 s4 = b.sum
 p(s3, s4) # added by me for debugging
+
+# Actually, both changes from these answers would have to be made, as each one introduces a different deviation from equivalence. It's ultimetely a matter of interpretation. Probably a sensible addition to the problem would be the prohibition of modifying the classes `A` and `B`, including any methods they end up with. Though even then I'm not sure – I don't know Ruby well enough – if all possibilities of `s3` and `s4` being unequal would be ruled out. Rough idea: define an `s3=` method on `Object` and remove it with `undef_method` from `A`.
